@@ -1,0 +1,23 @@
+.sales-table {
+  background-color: white;
+  margin: 5%;
+}
+
+.sales-table thead td {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.sales-table td {
+  padding: 5%;
+  border-bottom: solid 1px #efefef;
+  font-weight: 200;
+}
+
+@media only screen and (min-width: 700px) {
+  .sales-table {
+    margin: 3%;
+    width: 70%;
+    float: right;
+  }
+}

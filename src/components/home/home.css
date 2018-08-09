@@ -1,0 +1,14 @@
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: white;
+  margin-bottom: 5%;
+}
+
+@media only screen and (min-width: 1000) {
+  .product-details {
+  }
+}
