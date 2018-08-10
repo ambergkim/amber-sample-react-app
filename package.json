@@ -2,6 +2,11 @@
   "name": "amber-sample-react-app",
   "version": "0.1.0",
   "private": true,
+  "main": "server.js",
+  "engines": {
+    "npm": "6.1.0",
+    "node": "10.3.0"
+  },
   "dependencies": {
     "cors": "^2.8.4",
     "dotenv": "^6.0.0",
@@ -17,8 +22,8 @@
   },
   "scripts": {
     "start": "node server.js",
+    "startReact": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
