@@ -6,11 +6,6 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const path = require('path')
 
-const mongoose = require('mongoose');
-
-mongoose.connect(process.env.MONGODB_URI)
-  .then(() => console.log('mongo connected'))
-  .catch((err) => console.log(err));
 app.use(bodyParser.urlencoded({
   extended: true
 }));
@@ -112,7 +107,7 @@ app.use('/api', (req, res) => {
 });
 
 app.use(express.static(path.join(__dirname + '/build')));
-app.get('*', (req, res) => {
+app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname + '/build/index.html'));
 });
 
