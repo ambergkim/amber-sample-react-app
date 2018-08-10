@@ -11,7 +11,7 @@ const store = createStore(
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
 );
 
-let fetchUrl = process.env.REACT_APP_BASE_URL + '/api';
+let fetchUrl = 'https://amber-sample-sales-dash.herokuapp.com/api';
 
 console.log('React App Base Url', fetchUrl);
 
