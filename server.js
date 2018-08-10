@@ -111,12 +111,12 @@ app.use('/api', (req, res) => {
   res.status(200).send(json);
 });
 
-const PORT = process.env.PORT || 3000;
-
 app.use(express.static(path.join(__dirname + '/build')));
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname + '/build/index.html'));
 });
+
+const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
   console.log('http://localhost:' + PORT);
