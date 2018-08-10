@@ -108,13 +108,13 @@ app.use('/api', (req, res) => {
       "retailerMargin": 123466
     }]
   }];
-  res.send(json);
+  res.status(200).send(json);
 });
 
 const PORT = process.env.PORT || 3000;
 
 app.use(express.static(path.join(__dirname + '/build')));
-app.get('/', (req, res) => {
+app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname + '/build/index.html'));
 });
 
