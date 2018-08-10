@@ -11,14 +11,15 @@ const store = createStore(
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
 );
 
-console.log('fetch url', process.env.REACT_APP_BASE_URL);
+let fetchUrl = process.env.REACT_APP_BASE_URL + '/api';
 
-fetch(process.env.REACT_APP_BASE_URL + '/api')
+console.log('React App Base Url', fetchUrl);
+
+fetch(fetchUrl)
 .then(res => {
   return res.json();
 })
 .then(json => {
-  console.log('fetched from server', json);
   store.dispatch(dataInflate(json[0]))
 });
 
